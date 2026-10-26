@@ -2,3 +2,5 @@
 recursos/
 
 .presentation-build/
+outputs/
+tmp/
