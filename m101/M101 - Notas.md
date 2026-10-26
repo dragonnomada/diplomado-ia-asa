@@ -298,7 +298,7 @@ Las respuestas siguientes son deliberadamente **parciales**: presentan lo que ho
 6. la interfaz presenta recomendación, evidencia, incertidumbre y alternativas;
 7. el responsable humano decide y su resultado retroalimenta el sistema.
 
-La NASA investiga interacción humano-automatización, métodos formales, simulación y herramientas de apoyo para sistemas aeronáuticos críticos, sus publicaciones incluyen trabajo reciente sobre aprendizaje automático y asistencia para la configuración de pistas ([NASA ACE Lab](https://www.nasa.gov/human-systems-integration-division/integration-and-evaluation/aerospace-cognitive-engineering/); [NASA Aviation Systems Division](https://www.nasa.gov/ames/aviationsystems/publications/si/)). Este caso se plantea aquí como **adaptación didáctica**, no como descripción de una instalación de ASA.
+La NASA investiga interacción humano-automatización, métodos formales, simulación y herramientas de apoyo para sistemas aeronáuticos críticos, sus publicaciones incluyen trabajo reciente sobre aprendizaje automático y asistencia para la configuración de pistas ([NASA ACE Lab](https://www.nasa.gov/human-systems-integration-division/integration-and-evaluation/aerospace-cognitive-engineering/); [NASA Aviation Systems Division](https://www.nasa.gov/ames/aviationsystems/publications/si/)). Este caso se plantea aquí como **adaptación**, no como descripción de una instalación de ASA.
 
 **Qué enseña.**
 
@@ -435,7 +435,7 @@ $$
 
 o penalizaciones que reflejen la severidad del daño. La elección de $R$ es normativa: revela qué valora la organización. Una función mal diseñada puede optimizar puntualidad sacrificando seguridad o calidad.
 
-### 6.6 Ejemplo didáctico: inspeccionar o liberar una pista
+### 6.6 Ejemplo: inspeccionar o liberar una pista
 
 > **Nota:** este ejemplo no representa un procedimiento operacional ni sustituye normativa, criterio experto o certificación.
 
@@ -479,7 +479,7 @@ $$
 
 La alerta eleva la creencia de contaminación de **2 % a 26.9 %**, pero no demuestra con certeza que exista. El sistema debe ahora comparar acciones.
 
-Definamos utilidades didácticas:
+Definamos utilidades:
 
 | Acción y estado | Utilidad |
 |---|---:|
