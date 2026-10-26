@@ -1,10 +1,10 @@
 # Módulo 1.1 — Fundamentos de sistemas cognitivos
 
 > **Diplomado en Inteligencia Artificial**  
-> **Módulo 1:** Sistemas cognitivos y representación del conocimiento  
-> **Duración sugerida para el tema:** 4 horas de las 20 horas del módulo
+> **Módulo 1:** Sistemas cognitivos y representación del conocimiento
+> **Tema:** Fundamentos de sistemas cognitivos
 
-## Propósito de estas notas
+## Introducción
 
 Estas notas introducen los sistemas cognitivos como sistemas capaces de **percibir**, **representar conocimiento**, **razonar bajo incertidumbre**, **aprender**, **decidir** y **actuar** para alcanzar objetivos. El énfasis no está sólo en imitar al ser humano, sino en comprender qué componentes computacionales permiten transformar datos del entorno en decisiones justificables.
 
@@ -298,7 +298,7 @@ Las respuestas siguientes son deliberadamente **parciales**: presentan lo que ho
 6. la interfaz presenta recomendación, evidencia, incertidumbre y alternativas;
 7. el responsable humano decide y su resultado retroalimenta el sistema.
 
-NASA investiga interacción humano-automatización, métodos formales, simulación y herramientas de apoyo para sistemas aeronáuticos críticos; sus publicaciones incluyen trabajo reciente sobre aprendizaje automático y asistencia para configuración de pistas ([NASA ACE Lab](https://www.nasa.gov/human-systems-integration-division/integration-and-evaluation/aerospace-cognitive-engineering/); [NASA Aviation Systems Division](https://www.nasa.gov/ames/aviationsystems/publications/si/)). Este caso se plantea aquí como **adaptación didáctica**, no como descripción de una instalación de ASA.
+La NASA investiga interacción humano-automatización, métodos formales, simulación y herramientas de apoyo para sistemas aeronáuticos críticos, sus publicaciones incluyen trabajo reciente sobre aprendizaje automático y asistencia para la configuración de pistas ([NASA ACE Lab](https://www.nasa.gov/human-systems-integration-division/integration-and-evaluation/aerospace-cognitive-engineering/); [NASA Aviation Systems Division](https://www.nasa.gov/ames/aviationsystems/publications/si/)). Este caso se plantea aquí como **adaptación didáctica**, no como descripción de una instalación de ASA.
 
 **Qué enseña.**
 
@@ -437,7 +437,7 @@ o penalizaciones que reflejen la severidad del daño. La elección de $R$ es nor
 
 ### 6.6 Ejemplo didáctico: inspeccionar o liberar una pista
 
-> **Advertencia:** ejemplo simplificado para aprendizaje; no representa un procedimiento operacional ni sustituye normativa, criterio experto o certificación.
+> **Nota:** este ejemplo no representa un procedimiento operacional ni sustituye normativa, criterio experto o certificación.
 
 Supongamos dos estados:
 
