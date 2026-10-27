@@ -1,4 +1,4 @@
-# Diplomado en Inteligencia Artificial
+# Inteligencia Artificial
 
 Aeropuertos y Servicios Auxiliares (ASA)
 
