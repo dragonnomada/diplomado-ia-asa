@@ -1,6 +1,6 @@
 # Módulo 1.1 — Fundamentos de sistemas cognitivos
 
-> **Diplomado en Inteligencia Artificial**  
+> **Inteligencia Artificial**  
 > **Módulo 1:** Sistemas cognitivos y representación del conocimiento
 > **Tema:** Fundamentos de sistemas cognitivos
 
