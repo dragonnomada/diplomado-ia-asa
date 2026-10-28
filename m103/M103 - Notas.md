@@ -31,17 +31,17 @@ La pregunta central de este tema es:
 
 En un conjunto clásico, un elemento pertenece o no pertenece:
 
-\[
-\chi_A(x)\in\{0,1\}
-\]
+$$
+\chi_A(x) \in \{ 0, 1 \}
+$$
 
 En un conjunto difuso, la función de pertenencia admite valores intermedios:
 
-\[
+$$
 \mu_A:X\rightarrow[0,1]
-\]
+$$
 
-Si `x = 70` es un índice de residuos y \(\mu_{alto}(70)=0.5\), la expresión significa que el valor 70 tiene grado 0.5 de pertenencia al concepto definido como **residuo alto**.
+Si `x = 70` es un índice de residuos y $\mu_{alto}(70)=0.5$, la expresión significa que el valor 70 tiene grado 0.5 de pertenencia al concepto definido como **residuo alto**.
 
 El grado depende del modelo construido. No es una propiedad física aislada ni una frecuencia observada: expresa en qué medida un valor satisface un concepto gradual.
 
@@ -57,9 +57,9 @@ La lógica difusa y la probabilidad responden preguntas distintas:
 
 Por tanto:
 
-\[
+$$
 \mu_{alto}(70)=0.5 \not\Rightarrow P(\text{contaminación})=0.5
-\]
+$$
 
 Ambos enfoques pueden coexistir. Un sistema puede estimar probabilísticamente la presencia de una falla y, de manera separada, evaluar difusamente si su severidad es baja, media o alta. La semántica de cada valor debe conservarse durante todo el proceso.
 
@@ -105,12 +105,12 @@ Las formas más frecuentes son:
 
 Función triangular:
 
-\[
+$$
 \operatorname{tri}(x;a,b,c)=
 \max\left(\min\left(\frac{x-a}{b-a},\frac{c-x}{c-b}\right),0\right)
-\]
+$$
 
-donde \(a\) y \(c\) delimitan el soporte y \(b\) es el punto de pertenencia máxima.
+donde $a$ y $c$ delimitan el soporte y $b$ es el punto de pertenencia máxima.
 
 La forma elegida debe justificarse con conocimiento experto, datos, normas o una combinación de éstos. Una curva estéticamente suave no es necesariamente una buena representación del dominio.
 
@@ -129,17 +129,17 @@ Este solapamiento evita saltos artificiales y permite transiciones graduales. Si
 
 Con los operadores estándar de Zadeh:
 
-\[
+$$
 \mu_{\neg A}(x)=1-\mu_A(x)
-\]
+$$
 
-\[
+$$
 \mu_{A\cap B}(x)=\min(\mu_A(x),\mu_B(x))
-\]
+$$
 
-\[
+$$
 \mu_{A\cup B}(x)=\max(\mu_A(x),\mu_B(x))
-\]
+$$
 
 En una regla, `Y` suele implementarse con una **t-norma** y `O` con una **s-norma**. Mínimo y máximo son elecciones comunes, pero no las únicas. También existen el producto algebraico y la suma probabilística. Cambiar el operador puede cambiar la salida, por lo que debe formar parte de la especificación versionada.
 
@@ -147,9 +147,9 @@ En una regla, `Y` suele implementarse con una **t-norma** y `O` con una **s-norm
 
 El corte alfa convierte un conjunto difuso en uno clásico para un nivel dado:
 
-\[
+$$
 A_\alpha=\{x\in X\mid \mu_A(x)\geq\alpha\}
-\]
+$$
 
 Los cortes alfa ayudan a inspeccionar rangos, comparar conjuntos y comunicar qué valores satisfacen un concepto al menos en cierto grado. No sustituyen el razonamiento difuso; son una vista útil de él.
 
@@ -208,17 +208,17 @@ Las reglas deben expresar conocimiento del dominio. Si sólo reproducen condicio
 
 Para una regla con conjunción:
 
-\[
+$$
 \alpha_i=\min(\mu_A(x),\mu_B(y))
-\]
+$$
 
 Para una regla con disyunción:
 
-\[
+$$
 \alpha_i=\max(\mu_A(x),\mu_B(y))
-\]
+$$
 
-\(\alpha_i\) es la fuerza de activación de la regla. Puede interpretarse como el grado con el que el caso satisface sus antecedentes, no como la probabilidad de que la regla sea correcta.
+$\alpha_i$ es la fuerza de activación de la regla. Puede interpretarse como el grado con el que el caso satisface sus antecedentes, no como la probabilidad de que la regla sea correcta.
 
 ### 2.4 Implicación y agregación
 
@@ -230,10 +230,10 @@ Estas decisiones —recorte o escalamiento, máximo o suma acotada— deben mant
 
 Cuando la aplicación necesita una salida numérica, el conjunto agregado se transforma en un valor concreto. El método de centroide es común:
 
-\[
+$$
 y^*=\frac{\int y\,\mu_{salida}(y)\,dy}
 {\int \mu_{salida}(y)\,dy}
-\]
+$$
 
 Otros métodos incluyen bisector, media de máximos y máximo izquierdo o derecho. Cada uno conserva propiedades diferentes.
 
@@ -278,18 +278,18 @@ ENTONCES apertura ES grande
 
 En un sistema Takagi–Sugeno, el consecuente es una constante o función de las entradas:
 
-\[
+$$
 R_i:\quad \text{SI }x\text{ es }A_i\text{ Y }z\text{ es }B_i,
 \quad \text{ENTONCES }f_i=p_i x+q_i z+r_i
-\]
+$$
 
 La salida se obtiene como promedio ponderado:
 
-\[
+$$
 y^*=\frac{\sum_i \alpha_i f_i}{\sum_i\alpha_i}
-\]
+$$
 
-Si \(f_i\) es constante, se denomina Sugeno de orden cero.
+Si $f_i$ es constante, se denomina Sugeno de orden cero.
 
 **Fortalezas:**
 
@@ -396,7 +396,7 @@ Asignar silenciosamente cero suele ser incorrecto: cero puede ser una medición 
 
 ### 4.5 Escalabilidad de las reglas
 
-Con \(n\) variables y \(k\) términos por variable, una partición completa puede producir hasta \(k^n\) combinaciones. Para evitar una explosión de reglas se utilizan:
+Con $n$ variables y $k$ términos por variable, una partición completa puede producir hasta $k^n$ combinaciones. Para evitar una explosión de reglas se utilizan:
 
 - subsistemas jerárquicos;
 - reglas dispersas centradas en regiones relevantes;
@@ -565,7 +565,7 @@ La evolución no reemplaza automáticamente los modelos anteriores. Un sistema M
 
 ### 8.1 Objetivo y límites
 
-Se construirá un sistema Sugeno de orden cero para estimar una urgencia \(u\in[0,100]\). Es un ejemplo didáctico, no un procedimiento aeronáutico certificado.
+Se construirá un sistema Sugeno de orden cero para estimar una urgencia $u\in[0,100]$. Es un ejemplo didáctico, no un procedimiento aeronáutico certificado.
 
 La puntuación:
 
@@ -576,66 +576,66 @@ La puntuación:
 
 ### 8.2 Variables de entrada
 
-1. Índice de residuos \(r\in[0,100]\).
-2. Antigüedad de la inspección \(t\in[0,60]\) minutos.
+1. Índice de residuos $r\in[0,100]$.
+2. Antigüedad de la inspección $t\in[0,60]$ minutos.
 
 Para evitar divisiones indefinidas en los hombros, se expresan sus funciones por tramos.
 
 #### Residuo bajo
 
-\[
+$$
 \mu_{bajo}(r)=
 \begin{cases}
 1 & 0\le r\le20\\
 \frac{40-r}{20} & 20<r<40\\
 0 & r\ge40
 \end{cases}
-\]
+$$
 
 #### Residuo medio
 
-\[
+$$
 \mu_{medio}(r)=\operatorname{tri}(r;20,50,80)
-\]
+$$
 
 #### Residuo alto
 
-\[
+$$
 \mu_{alto}(r)=
 \begin{cases}
 0 & r\le60\\
 \frac{r-60}{20} & 60<r<80\\
 1 & 80\le r\le100
 \end{cases}
-\]
+$$
 
 #### Inspección reciente
 
-\[
+$$
 \mu_{reciente}(t)=
 \begin{cases}
 1 & 0\le t\le10\\
 \frac{25-t}{15} & 10<t<25\\
 0 & t\ge25
 \end{cases}
-\]
+$$
 
 #### Inspección próxima a vencer
 
-\[
+$$
 \mu_{por\_vencer}(t)=\operatorname{tri}(t;15,30,45)
-\]
+$$
 
 #### Inspección vencida
 
-\[
+$$
 \mu_{vencida}(t)=
 \begin{cases}
 0 & t\le35\\
 \frac{t-35}{15} & 35<t<50\\
 1 & 50\le t\le60
 \end{cases}
-\]
+$$
 
 ### 8.3 Base mínima de reglas
 
@@ -656,75 +656,75 @@ Esta base es deliberadamente pequeña para explicar el cálculo. Antes de usarla
 
 Supóngase:
 
-\[
+$$
 r=70,\qquad t=40
-\]
+$$
 
 Pertenencias del residuo:
 
-\[
+$$
 \mu_{bajo}(70)=0
-\]
+$$
 
-\[
+$$
 \mu_{medio}(70)=\frac{80-70}{80-50}=\frac{1}{3}\approx0.333
-\]
+$$
 
-\[
+$$
 \mu_{alto}(70)=\frac{70-60}{80-60}=0.5
-\]
+$$
 
 Pertenencias de la inspección:
 
-\[
+$$
 \mu_{reciente}(40)=0
-\]
+$$
 
-\[
+$$
 \mu_{por\_vencer}(40)=\frac{45-40}{45-30}=\frac{1}{3}
-\]
+$$
 
-\[
+$$
 \mu_{vencida}(40)=\frac{40-35}{50-35}=\frac{1}{3}
-\]
+$$
 
 ### 8.5 Activación de reglas
 
 Con `O = máximo` y `Y = mínimo`:
 
-\[
+$$
 \alpha_1=\max\left(0.5,\frac{1}{3}\right)=0.5
-\]
+$$
 
-\[
+$$
 \alpha_2=\min\left(\frac{1}{3},\frac{1}{3}\right)=\frac{1}{3}
-\]
+$$
 
-\[
+$$
 \alpha_3=\min(0,0)=0
-\]
+$$
 
 ### 8.6 Salida Sugeno
 
-\[
+$$
 u=\frac{\alpha_1(90)+\alpha_2(60)+\alpha_3(20)}
 {\alpha_1+\alpha_2+\alpha_3}
-\]
+$$
 
-\[
+$$
 u=\frac{0.5(90)+\frac{1}{3}(60)}{0.5+\frac{1}{3}}
 =\frac{65}{5/6}=78
-\]
+$$
 
 Una política didáctica podría interpretar:
 
 | Intervalo | Recomendación |
 |---:|---|
-| \(0\le u<35\) | monitorear |
-| \(35\le u\le65\) | revisar evidencia |
-| \(65<u\le100\) | inspeccionar y escalar |
+| $0\le u<35$ | monitorear |
+| $35\le u\le65$ | revisar evidencia |
+| $65<u\le100$ | inspeccionar y escalar |
 
-Como \(u=78\), el sistema recomienda inspeccionar y escalar. La decisión de bloquear o liberar continúa en manos de la autoridad definida por el proceso.
+Como $u=78$, el sistema recomienda inspeccionar y escalar. La decisión de bloquear o liberar continúa en manos de la autoridad definida por el proceso.
 
 ### 8.7 Lectura de la explicación
 
@@ -738,7 +738,7 @@ El resultado puede explicarse sin afirmar que el sistema “piensa”:
 
 ### 8.8 Relación con evidencia probabilística
 
-Si otro componente estima \(P(C\mid evidencia)=0.269\), ese valor debe conservarse como probabilidad. Puede combinarse en una capa posterior con la urgencia difusa, o convertirse en una variable lingüística sólo si la transformación y su significado se documentan.
+Si otro componente estima $P(C\mid evidencia)=0.269$, ese valor debe conservarse como probabilidad. Puede combinarse en una capa posterior con la urgencia difusa, o convertirse en una variable lingüística sólo si la transformación y su significado se documentan.
 
 No debe informarse:
 
@@ -841,7 +841,7 @@ Para cada función deben comprobarse:
 - punto de pertenencia máxima;
 - puntos de cruce;
 - valores inmediatamente a ambos lados de una frontera;
-- garantía de que \(0\le\mu(x)\le1\).
+- garantía de que $0\le\mu(x)\le1$.
 
 Ejemplos:
 
@@ -863,9 +863,9 @@ Ejemplos:
 
 Puede explorarse una malla de valores sobre el universo y medir:
 
-\[
+$$
 \text{cobertura}(x)=\sum_i\alpha_i(x)
-\]
+$$
 
 Si la suma es cero, ninguna regla aplica. Una cobertura positiva tampoco garantiza una salida correcta: sólo demuestra que existe activación.
 
@@ -873,9 +873,9 @@ Si la suma es cero, ninguna regla aplica. Una cobertura positiva tampoco garanti
 
 Si el conocimiento del dominio afirma que mayor residuo nunca debe reducir la urgencia, se prueba:
 
-\[
+$$
 r_1\le r_2\Rightarrow u(r_1,t)\le u(r_2,t)
-\]
+$$
 
 Una violación puede revelar reglas conflictivas, funciones mal ubicadas o una interacción legítima que requiere explicación.
 
