@@ -2,7 +2,7 @@
 
 > **Inteligencia Artificial**  
 > **Módulo 1 — Sistemas cognitivos y representación del conocimiento**  
-> Tema 1.2
+> **Tema:** Arquitecturas de representación del conocimiento
 
 ## Introducción
 
